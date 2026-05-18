@@ -21,9 +21,18 @@ export async function scrapeContent(url: string) {
       upVote: string;
       downVote: string;
       video: string;
+      mainVideo: string;
       tags: string[];
       models: string[];
       constructor() {
+        const thumb =
+          $("script")
+            .map((i, el) => {
+              return $(el).text();
+            })
+            .get()
+            .filter((el) => el.includes("html5player.setThumbSlideBig"))[0] ||
+          "None";
         this.link = $("link[rel='canonical']").attr("href") || "None";
         this.id = this.link.split("=")[1] || "None";
         this.title = $("meta[property='og:title']").attr("content") || "None";
@@ -42,6 +51,7 @@ export async function scrapeContent(url: string) {
             return $(el).text();
           }).get();
         this.tags.shift();
+        this.mainVideo = thumb.match(/html5player.setVideoUrlHigh\((.*?)\)/)?.[1] || "None";
         this.tags = this.tags.map((el) => adultcolony.removeHtmlTagWithoutSpace(el));
         this.models = $("div.pornstarsWrapper.js-pornstarsWrapper")
           .find("a")
@@ -68,7 +78,7 @@ export async function scrapeContent(url: string) {
         tags: ph.tags.filter((el) => el !== "Suggest" && el !== " Suggest")
       },
       source: ph.link,
-      assets: [ph.video, ph.image]
+      assets: [ph.video, ph.image, ph.mainVideo]
     };
     return data;
   } catch (err) {
