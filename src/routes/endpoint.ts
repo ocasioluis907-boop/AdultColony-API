@@ -14,13 +14,13 @@ import { getSpankbang } from "../controllers/spankbang/spankbangGet";
 
 import { getXnxx } from "../controllers/xnxx/xnxxGet";
 import { searchXnxx } from "../controllers/xnxx/xnxxSearch";
-import { relatedXnxx } from "../controller/xnxx/xnxxGetRelated";
-import { randomXnxx } from "../controller/xnxx/xnxxRandom";
+import { relatedXnxx } from "../controllers/xnxx/xnxxGetRelated";
+import { randomXnxx } from "../controllers/xnxx/xnxxRandom";
 
 import { getXvideos } from "../controllers/xvideos/xvideosGet";
 import { searchXvideos } from "../controllers/xvideos/xvideosSearch";
-import { randomXvideos } from "../controller/xvideos/xvideosRandom";
-import { relatedXvideos } from "../controller/xvideos/xvideosGetRelated";
+import { randomXvideos } from "../controllers/xvideos/xvideosRandom";
+import { relatedXvideos } from "../controllers/xvideos/xvideosGetRelated";
 
 import { getEporner } from "../controllers/eporner/epornerGet";
 import { searchEporner } from "../controllers/eporner/epornerSearch";
@@ -1028,13 +1028,13 @@ function scrapeRoutes() {
   
   router.get("/xnxx/get", cors(), slow, limiter, getXnxx);
   router.get("/xnxx/search", cors(), slow, limiter, searchXnxx);
-  router.get("/xnxx/random", cors(), slow, limiter, relatedXnxx);
-  router.get("/xnxx/related", cors(), slow, limiter, randomXnxx);
+  router.get("/xnxx/random", cors(), slow, limiter, randomXnxx);
+  router.get("/xnxx/related", cors(), slow, limiter, relatedXnxx);
   
   router.get("/xvideos/get", cors(), slow, limiter, getXvideos);
   router.get("/xvideos/search", cors(), slow, limiter, searchXvideos);
-  router.get("/xnxx/random", cors(), slow, limiter, relatedXvideos);
-  router.get("/xnxx/related", cors(), slow, limiter, randomXvideos);
+  router.get("/xvideos/random", cors(), slow, limiter, randomXvideos);
+  router.get("/xvideos/related", cors(), slow, limiter, relatedXvideos);
   
   router.get("/eporner/get", cors(), slow, limiter, getEporner);
   router.get("/eporner/search", cors(), slow, limiter, searchEporner);
