@@ -179,3 +179,23 @@ export interface ISearchVideoData {
 export interface MaybeError {
   message: string;
 }
+
+export interface XnxxRelatedRaw {
+  id: string | number;
+  u: string;
+  t: string;
+  i: string;
+  d: string;
+  n: string;
+  r: string | number;
+}
+
+export interface XvideosRelatedRaw {
+  id: string | number;
+  u: string;
+  t: string;
+  i: string;
+  d: string;
+  n: string;
+  r: string | number;
+}
