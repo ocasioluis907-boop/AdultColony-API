@@ -6,7 +6,7 @@ export async function relatedXnxx({ query }: { query: { id: string } }) {
     const { id } = query;
     const url = `${c.XNXX}/${id}`;
     const data = await scrapeContent(url);
-    return data;
+    res.json(data);
   } catch (err) {
     const e = err as Error;
     throw new Error(e.message);
