@@ -1,4 +1,4 @@
-import { scrapeContent } from "../../scraper/xnxx/xnxxGetRelatedController";
+import { scrapeContent } from "../../services/scrapers/xnxx/xnxxGetRelatedController";
 import c from "../../utils/options";
 
 export async function relatedXnxx({ query }: { query: { id: string } }) {
