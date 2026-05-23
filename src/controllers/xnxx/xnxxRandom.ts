@@ -1,4 +1,4 @@
-import { scrapeContent } from "../../scraper/xnxx/xnxxGetController";
+import { scrapeContent } from "../../services/scrapers/xnxx/xnxxGetController";
 import c from "../../utils/options";
 import { lust } from "../../LustPress";
 import { load } from "cheerio";
