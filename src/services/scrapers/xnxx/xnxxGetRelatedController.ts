@@ -41,7 +41,7 @@ export async function scrapeContent(url: string) {
     if (x.search.length === 0) throw Error("No result found");
     const result: ISearchVideoData = {
       success: true,
-      data: x.search as unknown as string[],
+      data: x.search.flat() as unknown as string[],
       source: url,
     };
     return result;
