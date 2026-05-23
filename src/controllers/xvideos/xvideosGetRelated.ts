@@ -1,4 +1,4 @@
-import { scrapeContent } from "../../scraper/xvideos/xvideosGetRelatedController";
+import { scrapeContent } from "../../services/scrapers/xvideos/xvideosGetRelatedController";
 import c from "../../utils/options";
 
 export async function relatedXvideos({ query }: { query: { id: string } }) {
