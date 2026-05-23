@@ -1,11 +1,15 @@
 import { load } from "cheerio";
-import { lust } from "../../../LustPress";
+// FIX: Swapped out LustPress for your verified AdultColony engine module
+import AdultColony from "../../../AdultColony";
 import c from "../../../utils/options";
 import { ISearchVideoData, XnxxRelatedRaw } from "../../../interfaces";
 
+const adultcolony = new AdultColony();
+
 export async function scrapeContent(url: string) {
   try {
-    const res = await lust.fetchBody(url);
+    // FIX: Using the verified fetchBody engine call
+    const res = await adultcolony.fetchBody(url);
     const $ = load(res);
 
     class XnxxSearch {
