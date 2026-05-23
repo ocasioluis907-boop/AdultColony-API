@@ -1,7 +1,7 @@
 import { load } from "cheerio";
-import { lust } from "../../LustPress";
-import c from "../../utils/options";
-import { ISearchVideoData, XvideosRelatedRaw } from "../../interfaces";
+import { lust } from "../../../LustPress";
+import c from "../../../utils/options";
+import { ISearchVideoData, XvideosRelatedRaw } from "../../../interfaces";
 
 export async function scrapeContent(url: string) {
   try {
@@ -46,4 +46,4 @@ export async function scrapeContent(url: string) {
     const e = err as Error;
     throw Error(e.message);
   }
-}
+}
