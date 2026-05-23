@@ -10,6 +10,7 @@ export async function scrapeContent(url: string) {
   try {
     // 1. Fetch data safely using verified engine method
     const res = await adultcolony.fetchBody(url);
+    console.log(res);
     if (!res) {
       return { success: false, data: [], message: "Empty HTML response received from target source." };
     }
