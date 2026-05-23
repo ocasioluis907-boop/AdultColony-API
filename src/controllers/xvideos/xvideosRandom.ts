@@ -1,5 +1,5 @@
 import { load } from "cheerio";
-import { scrapeContent } from "../../scraper/xvideos/xvideosGetController";
+import { scrapeContent } from "../../services/scrapers/xvideos/xvideosGetController";
 import c from "../../utils/options";
 import { lust } from "../../LustPress";
 
