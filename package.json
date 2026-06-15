@@ -8,7 +8,9 @@
     "build": "rimraf build && tsc && cpy \"public/**/*\" build/public --parents",
     "start": "node build/src/index.js",
     "start:prod": "npm run build && npm run start",
-    "start:dev": "tsx watch src/index.ts"
+    "start:dev": "tsx watch src/index.ts",
+    "deploy": "wrangler deploy",
+    "preview": "wrangler dev"
   },
   "keywords": [
     "api",
@@ -52,7 +54,8 @@
     "cpy": "^11.1.0",
     "cpy-cli": "^5.0.0",
     "tsx": "^4.7.0",
-    "typescript": "^5.8.3"
+    "typescript": "^5.8.3",
+    "wrangler": "^4.100.0"
   },
   "overrides": {
     "swagger-jsdoc": {
